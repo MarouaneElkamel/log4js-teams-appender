@@ -1,5 +1,5 @@
 {
-  "name": "@marouane/log4js-teams",
+  "name": "@marouaneelkamel/log4js-teams",
   "version": "1.0.5",
   "description": "Log4js teams appender",
   "main": "index.js",
