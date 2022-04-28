@@ -1,0 +1,34 @@
+{
+  "name": "@marouane/log4js-teams",
+  "version": "1.0.5",
+  "description": "Log4js teams appender",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com:kevit-technologies-open-source/log4js-teams-appender.git"
+  },
+  "keywords": [
+    "log4js",
+    "log",
+    "node",
+    "logger",
+    "ms-teams",
+    "appender",
+    "ms teams",
+    "teams",
+    "chat",
+    "webhook"
+  ],
+  "author": "Marouane Elkamel",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/MarouaneElkamel/log4js-teams-appender.git"
+  },
+  "homepage": "https://github.com/MarouaneElkamel/log4js-teams-appender.git",
+  "dependencies": {
+    "ms-teams-webhook": "1.0.4"
+  }
+}
