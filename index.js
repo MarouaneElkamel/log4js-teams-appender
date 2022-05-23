@@ -1,6 +1,6 @@
 const { IncomingWebhook } = require('ms-teams-webhook');
 
-let sendMessage = (logType, categoryName, message, webhookUrl) => {
+let sendMessage = (logType, categoryName, message, webhookUrl, appName) => {
     const webhook = new IncomingWebhook(webhookUrl);
     let themeColor = '';
     switch (logType) {
@@ -28,8 +28,8 @@ let sendMessage = (logType, categoryName, message, webhookUrl) => {
         "@type": "MessageCard",
         "@context": "https://schema.org/extensions",
         "themeColor": "f50e02",
-        "summary": "Ripple - ERROR",
-        "title":  "Ripple - ERROR",
+        "summary": appName + " - ERROR",
+        "title":  appName + " - ERROR",
         "text" : message
     })).then(() => {
     })
@@ -61,7 +61,7 @@ function teamsAppender(config, layout, pattern) {
                 message += d + ' ';
             })
 
-            sendMessage(loggingEvent.level.levelStr, loggingEvent.categoryName, message, config.webhookUrl);
+            sendMessage(loggingEvent.level.levelStr, loggingEvent.categoryName, message, config.webhookUrl, loggingEvent.context.app_name);
 
         }
     };
